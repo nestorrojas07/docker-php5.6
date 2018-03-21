@@ -33,7 +33,7 @@ RUN apt-get install -y \
     php5.6-curl \
     php5.6-xml \
     php5.6-zip \
-    php5-gd
+    php5.6-gd
 
 # Add config files
 ADD config/fpm-php.ini /etc/php/5.6/fpm/php.ini
