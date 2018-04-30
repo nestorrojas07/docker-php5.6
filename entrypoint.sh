@@ -22,7 +22,7 @@ usermod -s /bin/bash www-data
 
 sudo -u www-data php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 sudo -u www-data php -r "if (hash_file('SHA384', 'composer-setup.php') === $COMPOSER_HASH) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); exit; } echo PHP_EOL;"
-sudo -u www-data php composer-setup.php
+sudo -u www-data php composer-setup.php --version=1.6.3
 sudo -u www-data php -r "unlink('composer-setup.php');"
 
 sudo -u www-data chmod +x composer.phar
